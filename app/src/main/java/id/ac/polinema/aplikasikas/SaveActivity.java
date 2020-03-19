@@ -2,6 +2,7 @@ package id.ac.polinema.aplikasikas;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 
@@ -49,7 +50,7 @@ public class SaveActivity extends AppCompatActivity {
         return Transaction.Type.EMPTY;
     }
 
-    public void handleSubmit(View v) {
+    public void handleSubmit(View view) {
         String description = descriptionIn.getText().toString();
         int amount = Integer.parseInt(amountIn.getText().toString());
         Transaction.Type type = getCheckedType();

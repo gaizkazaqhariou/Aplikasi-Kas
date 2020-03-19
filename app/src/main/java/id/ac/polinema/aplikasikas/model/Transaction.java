@@ -34,6 +34,9 @@ public class Transaction implements Parcelable {
         this.type = type;
     }
 
+    public Transaction() {
+    }
+
     @Override
     public int describeContents() {
         return 0;
