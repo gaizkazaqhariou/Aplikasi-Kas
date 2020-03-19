@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import id.ac.polinema.aplikasikas.adapter.TransactionAdapter;
 import id.ac.polinema.aplikasikas.model.Account;
 import id.ac.polinema.aplikasikas.model.Transaction;
@@ -41,7 +43,8 @@ public class MainActivity extends AppCompatActivity implements TransactionAdapte
         balanceText = findViewById(R.id.text_balance);
         transactionView = findViewById(R.id.rv_transactions);
 
-        findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SaveActivity.class);
