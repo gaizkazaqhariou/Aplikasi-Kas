@@ -1,5 +1,6 @@
 package id.ac.polinema.aplikasikas.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Account {
@@ -9,6 +10,8 @@ public class Account {
 
     public Account(String name) {
         this.name = name;
+        this.balance = 0;
+        this.transactions = new ArrayList<>();
     }
 
     public String getName() {
